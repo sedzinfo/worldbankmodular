@@ -1,0 +1,63 @@
+url: https://sedzinfo.github.io/worldbankmodular/
+
+template:
+  bootstrap: 5
+  bootswatch: flatly
+
+code:
+  width: 200
+
+destination: docs
+
+navbar:
+  structure:
+    left: [intro, reference, articles]
+    right: [github]
+  components:
+    github:
+      icon: fab fa-github
+      href: https://github.com/sedzinfo/worldbankmodular
+      aria-label: GitHub
+
+reference:
+
+  - title: "Datasets"
+    contents:
+      - country_code
+      - mfi
+      - mfi_population
+
+  - title: "UI"
+    desc: "Internal functions not meant to run independently"
+    contents:
+      - mod_bar_ui
+      - mod_country_comp_ui
+      - mod_index_table_ui
+      - mod_indicator_comp_ui
+      - mod_map_ui
+      - mod_pyramid_ui
+      - mod_scatter_ui
+
+  - title: "Server"
+    desc: "Internal functions not meant to run independently"
+    contents:
+      - mod_bar_server
+      - mod_country_comp_server
+      - mod_index_table_server
+      - mod_indicator_comp_server
+      - mod_map_server
+      - mod_pyramid_server
+      - mod_scatter_server
+  - title: "Plot"
+    contents:
+      - plot_bar
+      - plot_cor
+      - plot_country_comp
+      - plot_indicator_comp
+      - plot_map
+      - plot_pyramid
+  - title: "Render"
+    contents:
+      - render_index_table
+      - run_app
+  

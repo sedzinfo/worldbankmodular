@@ -1,0 +1,72 @@
+#' The application User-Interface
+#'
+#' Defines the top-level navbar layout, with one tab per Shiny module.
+#'
+#' @param request Internal parameter for `{shiny}`. DO NOT REMOVE.
+#'
+#' @import shiny
+#' @noRd
+#'
+#' @examples
+#' \dontrun{
+#' shiny::shinyApp(ui = app_ui, server = app_server)
+#' }
+app_ui <- function(request) {
+  tagList(
+    # Leave this function for adding external resources
+    golem_add_external_resources(),
+    # Application UI logic
+    navbarPage(
+      title = "Data: World Bank",
+      collapsible = TRUE,
+      fluid = TRUE,
+      windowTitle = "Worldbank",
+      tags$head(
+        tags$style(HTML('.navbar-nav > li > a, .navbar-brand {
+          padding-top:4px;
+          padding-bottom:4px;
+          height: 25px;
+          }
+          .navbar {min-height:20px;}'))
+      ),
+      tabPanel(title = "Country Comparison", mod_country_comp_ui("country_comp")),
+      tabPanel(title = "Indicator Comparison", mod_indicator_comp_ui("indicator_comp")),
+      tabPanel(title = "Pyramid", mod_pyramid_ui("pyramid")),
+      tabPanel(title = "Barplot", mod_bar_ui("bar")),
+      tabPanel(title = "Scatterplot", mod_scatter_ui("scatter")),
+      tabPanel(title = "Map", mod_map_ui("map")),
+      tabPanel(title = "Index", mod_index_table_ui("index_table"))
+    )
+  )
+}
+
+#' Add external resources to the application
+#'
+#' Internally used to add JS/CSS/favicon resources inside the Shiny
+#' application.
+#'
+#' @import shiny
+#' @importFrom golem add_resource_path favicon bundle_resources
+#' @noRd
+#'
+#' @examples
+#' \dontrun{
+#' # called from inside app_ui():
+#' shiny::tagList(golem_add_external_resources(), shiny::fluidPage())
+#' }
+golem_add_external_resources <- function() {
+  add_resource_path(
+    "www",
+    app_sys("app/www")
+  )
+
+  tags$head(
+    favicon(),
+    bundle_resources(
+      path = app_sys("app/www"),
+      app_title = "worldbankmodular"
+    )
+    # Add here other external resources
+    # for example, you can add shinyalert::useShinyalert()
+  )
+}

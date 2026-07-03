@@ -1,0 +1,7 @@
+.Rproj.user
+.Rhistory
+data/WDICSV.csv
+data/WDI_CSV.zip
+.Rbuildignore
+.RDataTmp
+.RData

@@ -1,0 +1,23 @@
+Package: worldbankmodular
+Title: World Bank Indicators Explorer
+Version: 0.0.1
+Authors@R: person("Dimitrios", "Zacharatos", email = "dzacharatos@yahoo.com", role = c("aut", "cre"))
+Author: Dimitrios Zacharatos [aut, cre]
+Maintainer: Dimitrios Zacharatos <dzacharatos@yahoo.com>
+Description: A Shiny application, built as a golem package, for exploring
+    World Bank development indicators through interactive country
+    comparison, indicator comparison, population pyramid, ranked bar chart,
+    correlation scatter, and choropleth map views.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+Imports:
+    config,
+    dplyr,
+    DT,
+    golem,
+    pkgload,
+    plotly,
+    shiny
+Config/roxygen2/version: 8.0.0

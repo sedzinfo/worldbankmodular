@@ -1,0 +1,8 @@
+/* Enlarge htmlwidget plots (plotly, DT) rendered in reference examples.
+   Scoped to .template-reference-topic (not #ref-examples): pkgdown puts the
+   "ref-examples" id on the <h2> itself, and the widget is its sibling, not
+   its descendant, so an #ref-examples-scoped selector never matches it. */
+.template-reference-topic .html-widget {
+  width: 100% !important;
+  height: 1000px !important;
+}
