@@ -123,13 +123,13 @@ git lfs ls-files
 
 # Screenshots
 
-![Country Comparison tab](screenshot/worldbank1.png)
-![Indicator Comparison tab](screenshot/worldbank2.png)
-![Pyramid tab](screenshot/worldbank3.png)
-![Barplot tab](screenshot/worldbank4.png)
-![Scatterplot tab](screenshot/worldbank5.png)
-![Map tab](screenshot/worldbank6.png)
-![Index tab](screenshot/worldbank7.png)
+![Country Comparison tab](man/figures/worldbank1.png)
+![Indicator Comparison tab](man/figures/worldbank2.png)
+![Pyramid tab](man/figures/worldbank3.png)
+![Barplot tab](man/figures/worldbank4.png)
+![Scatterplot tab](man/figures/worldbank5.png)
+![Map tab](man/figures/worldbank6.png)
+![Index tab](man/figures/worldbank7.png)
 
 ---
 
